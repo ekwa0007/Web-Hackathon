@@ -18,14 +18,19 @@
 #output{
     width: 100%;
     height: auto;
-    margin-left: auto;
-    margin-right: auto;
+    display: flex;
+    justify-content: center;
 }
 
-#output table{
+#outputTable{
     display: block;
-    width: auto;
+    width: 70%;
     height: auto;
     margin-left: auto;
     margin-right: auto;
+    border: 1px solid;
+}
+
+tr{
+    width: 100%;
 }
