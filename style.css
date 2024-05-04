@@ -911,6 +911,7 @@ body {
     flex-direction: column;
     width: 100%;
     padding-top: 5%;
+    padding-bottom: 5%;
     align-items: center;
     background-attachment: fixed;
     background-image: url(assets/star.png);
@@ -993,13 +994,16 @@ thead th {
 
 .site-footer{
     background-color:#26272b;
-    padding:45px 0 20px;
+    width: 100%;
+    padding-top: 50px;
+    margin-bottom: 50px;
     font-size:15px;
     line-height:24px;
     color:#737373;
     display:flex;
     justify-content: center;
 }
+
 .site-footer hr{
     border-top-color:#bbb;
     opacity:0.5
@@ -1032,24 +1036,28 @@ thead th {
 .footer-links a{
     color: #fff;
 }
+
 .footer-links.inline li
     {
     display:inline-block
     }
-    .site-footer .social-icons
+  
+.site-footer .social-icons
     {
     text-align:right
     }
-    .copyright-text
+    
+.copyright-text
     {
         color:white;
         margin:0;
+        margin-bottom: 50px;
     }
-    .site-footer,.copyright-text
+
+.site-footer,.copyright-text
     {
         padding-bottom:0;
         text-align: center;
     }
-}
 
                                     
