@@ -860,6 +860,7 @@ body {
     align-items: center;
     width: 100%;
     animation: fadeUp 3s;
+    animation-fill-mode: forwards
 }
 
 .study img {
@@ -871,8 +872,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-120%, 270%);
-    -ms-transform: translate(-50%, -50%);
+    transform: translate(-120%, 300%);
     background-color: white; 
     border: none;
     padding: 20px 180px;
@@ -907,7 +907,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-top: 5%;
+    padding-top: 5%;
     align-items: center;
     background-attachment: fixed;
     background-image: url(assets/star.png);
