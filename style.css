@@ -856,26 +856,26 @@ body {
 
 .study{
     display: flex;
+    background-color: #ff6868;
     justify-content: center;
     align-items: center;
+    width: 100%;
+}
+
+.study img {
     width: 100%;
     animation: fadeUp 3s;
     animation-fill-mode: forwards
 }
 
-.study img {
-    width: 100%;
-}
-
 
 .study .btn {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-120%, 300%);
+    top: 80%;
+    left: 10%;
     background-color: white; 
     border: none;
-    padding: 20px 180px;
+    padding: 1.5% 10%;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -885,6 +885,8 @@ body {
     cursor: pointer;
     border-radius: 25px;
     font-family:"Outfit", sans-serif;
+    animation: fadeUp 3s;
+    animation-fill-mode: forwards
 }
 
   
