@@ -1,10 +1,26 @@
 var table = document.getElementById("outputTable");
 var values = [];
 document.getElementById("infoSubmit").onclick = () =>{
+    if (checkMandatory()){
         insertData();
         updateCountdown();
+    }
 }
 
+function checkMandatory() {
+    let mandatory = document.getElementById("mandatory");
+    let uname = document.getElementById("unamein").value;
+    let aname = document.getElementById("anamein").value;
+    let adate = document.getElementById("adatein").value;
+    let aweight = document.getElementById("aweightin").value;
+    if (uname == "" || aname == "" || adate == "" || aweight == "") {
+        mandatory.style.display = "block";
+        return false;
+    } else {
+        mandatory.style.display = "none";
+        return true;
+    }
+}
 
 function insertData(){
     values.push([document.getElementById("unamein").value, document.getElementById("anamein").value, document.getElementById("adatein").value, document.getElementById("aweightin").value])
@@ -18,9 +34,13 @@ function insertData(){
     table.appendChild(row);
 };
 
-function updateCountdown(){
+function updateCountdown(stop = false) {
     var countDownDate = new Date(values[0][2]).getTime();
 
+    if (stop) {
+        clearInterval(x);
+        document.getElementById("theFinalCountdown").innerHTML = null;
+    }
     // Update the count down every 1 second
     var x = setInterval(function() {    
         // Get today's date and time
