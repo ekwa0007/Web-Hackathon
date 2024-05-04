@@ -7,15 +7,17 @@ body {
     margin: 0;
 }
 
+
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; 
-    
+    height: auto; 
+    max-width: 80%; 
+    margin: auto; 
 }
 
-#assesInfo{
+#assesInfo {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
@@ -23,25 +25,43 @@ body {
     margin: 10px;
 }
 
-#assesInfo input{
+#assesInfo input {
     background-color: white; 
     border: 1px solid #ddd;
     border-radius: 5px; 
     padding: 10px; 
-    width: 100%;
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    margin-bottom: 10px; /* Add some space between inputs */
+    width: 100%; /* Ensures the input takes up the full width of its grid cell */
+    box-sizing: border-box;
+    margin-bottom: 10px;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    
 }
+
 #mandatory{
     display: none;
 }
 
+.button-container {
+    text-align: center; 
+    width: 100%;
+}
 #infoSubmit{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    background-color: white; 
+    border: none;
+    padding: 0.7% 4%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px; 
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 25px;
+    font-family:"Outfit", sans-serif;
+}
+
+#infoSubmit:hover {
+    background-color: black;
+    color: white;
 }
 
 #output{
