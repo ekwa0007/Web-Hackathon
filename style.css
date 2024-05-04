@@ -755,7 +755,7 @@ body {
       filter: grayscale(1) brightness(10000%);
     }
     #cs-navigation .cs-social-icon {
-      width: 0.75rem;
+      width: 1rem;
       height: auto;
       opacity: 0.6;
       display: block;
