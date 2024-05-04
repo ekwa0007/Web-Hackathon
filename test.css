@@ -24,15 +24,18 @@
 
 #outputTable{
     display: block;
-    width: 100%;
+    width: 80%;
     height: auto;
     margin-left: auto;
     margin-right: auto;
     border: 1px solid;
+    text-align: center;
 }
-td{
-    width: 100%;
-}
-tr{
-    width: 100%;
+
+#unamehead, #anamehead, #duehead, #weighthead{
+    width: 30rem;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
