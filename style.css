@@ -949,20 +949,20 @@ main.table {
     overflow:hidden;
 }
 
-td img{
+.table_body td img{
     width: 36px;
     height:36px;
     margin-right: .5rem;
     border-radius: 50%;
 }
 
-table, th, td {
+.table_body table, th, td {
     border-collapse: collapse;
     padding: 2.3rem;
     text-align: left;
 }      
 
-thead th {
+.table_body thead th {
     position: sticky;
     top: 0;
     left: 0;
@@ -1077,4 +1077,45 @@ thead th {
         text-align: center;
     }
 
+    #assesInfo{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: 10px;
+      justify-content: center;
+      margin: 10px;
+  }
+  #mandatory{
+      display: none;
+  }
+  
+  #infoSubmit{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  
+  #output{
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+  }
+  
+  #outputTable{
+      display: block;
+      width: 80%;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+      border: 1px solid;
+      text-align: center;
+  }
+  
+  #unamehead, #anamehead, #duehead, #weighthead{
+      width: 30rem;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+  }
                                     
