@@ -1,0 +1,31 @@
+#assesInfo{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    justify-content: center;
+    margin: 10px;
+}
+#mandatory{
+    display: none;
+}
+
+#infoSubmit{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#output{
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#output table{
+    display: block;
+    width: auto;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
