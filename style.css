@@ -904,11 +904,18 @@ body {
     }
 }
 
+#leaderboard {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 5%;
+    align-items: center;
+}
+
 main.table {
     width: 90vh;
     height: 50vh;
     margin-top: 5em;
-    margin-left: 6em;
 
     background-color: #fff5;
     backdrop-filter: blur(7px);
@@ -928,7 +935,7 @@ td img{
 
 table, th, td {
     border-collapse: collapse;
-    padding: 1rem;
+    padding: 2.3rem;
     text-align: left;
 }      
 
