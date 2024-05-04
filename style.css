@@ -918,6 +918,23 @@ body {
     background-size: cover;
 }
 
+.with-text {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center; 
+}
+.with-text h1 {
+    font-size: 50px;
+    padding-right: 3em;
+    color: #000; /* Initial color */
+    transition: color 0.3s ease; /* Specify the transition for the color property */
+}
+
+.with-text h1:hover {
+    color: #ffdb8b; /* Color to transition to on hover */
+}
+
 main.table {
     width: 90vh;
     height: 70vh;
