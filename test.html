@@ -9,12 +9,12 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="navigate"></div>
+    <!-- <div id="navigate"></div>
     <script>
         $(function(){
             $("#navigate").load("index.html #cs-navigation");
         });
-    </script>
+    </script> -->
     <label>Remaining time to the submission of the next assignment:</label>
     <h1 id = "theFinalCountdown"></h1>
     <div id="assesInfo">
@@ -29,7 +29,7 @@
     </div>
     <label id="mandatory">mandatory input not filled</label>
     <button id="infoSubmit">Submit</button>
-    <div id="output">
+    <div id="output" class="Output">
         <table id="outputTable">
             <th id ="unamehead">Unit name</th>
             <th id ="anamehead">Assessment name</th>
@@ -38,6 +38,11 @@
         </table>
     </div>
     <script src="test.js"></script>
-    
+    <div id="footer"></div>
+    <script>
+        $(function(){
+            $("#footer").load("index.html .site-footer");
+        });
+    </script>
 </body>
 </html>
