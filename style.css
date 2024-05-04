@@ -851,5 +851,12 @@ body {
       display: flex;
     }
   }
+
+.study{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
                                   
                                   
