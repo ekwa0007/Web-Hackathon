@@ -4,6 +4,8 @@ body {
     font-weight: 400;
     font-style: normal;
     margin: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 @media only screen and (min-width: 0rem) {
@@ -858,21 +860,23 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
+    animation: fadeUp 3s;
 }
 
 .study img {
-  width: 100%
+    width: 100%;
 }
+
 
 .study .btn {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-120%, 270%);
     -ms-transform: translate(-50%, -50%);
     background-color: white; 
     border: none;
-    padding: 20px 150px;
+    padding: 20px 180px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -880,13 +884,25 @@ body {
     margin: 4px 2px;
     transition-duration: 0.4s;
     cursor: pointer;
-    border-radius: 25px; /* Added border-radius to make the edges round */
+    border-radius: 25px;
+    font-family:"Outfit", sans-serif;
 }
 
   
-  .btn:hover {
+.btn:hover {
     background-color: black;
     color: white;
-  }
+}
+
+  @keyframes fadeUp {
+    0% { 
+        opacity: 0; 
+        transform: translateY(40px);
+    }
+    100% { 
+        opacity: 1; 
+        transform: translateY(0px);
+    }
+}
                                   
                                   
