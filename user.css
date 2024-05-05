@@ -78,6 +78,11 @@ main.table {
     width: 60%;
 }
 
+.name{
+    color: white;
+    font-size: 40px;
+}
+
 .card {
     margin-top: 5rem;
     margin-right: auto;
