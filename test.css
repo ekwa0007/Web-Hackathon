@@ -8,6 +8,10 @@ body {
     background-color: rgb(216, 235, 241);
 }
 
+label[for="remainingTime"] {
+    text-align: center !important;
+    display: block;
+}
 
 h1 {
     font-size: 90px;
