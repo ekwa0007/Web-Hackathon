@@ -1,10 +1,18 @@
 var table = document.getElementById("outputTable");
 var values = [];
+var timer_index = 0;
 document.getElementById("infoSubmit").onclick = () =>{
     if (checkMandatory()){
         insertData();
         updateCountdown();
     }
+}
+
+document.getElementById("infoClear").onclick = () =>{
+    document.getElementById("unamein").value = "";
+    document.getElementById("anamein").value = "";
+    document.getElementById("adatein").value = "";
+    document.getElementById("aweightin").value = "";
 }
 
 function checkMandatory() {
@@ -32,17 +40,21 @@ function insertData(){
         row.appendChild(data);
     }
     table.appendChild(row);
+    document.getElementById("unamein").value = "";
+    document.getElementById("anamein").value = "";
+    document.getElementById("adatein").value = "";
+    document.getElementById("aweightin").value = "";
+    values.sort(compareFn);
 };
 
 function updateCountdown(stop = false) {
-    var countDownDate = new Date(values[0][2]).getTime();
-
     if (stop) {
         clearInterval(x);
         document.getElementById("theFinalCountdown").innerHTML = null;
     }
     // Update the count down every 1 second
-    var x = setInterval(function() {    
+    var x = setInterval(function() {
+        var countDownDate = new Date(values[timer_index][2]).getTime();    
         // Get today's date and time
         var now = new Date().getTime();
         
@@ -55,14 +67,85 @@ function updateCountdown(stop = false) {
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
         
+        
         // Output the result in an element with id="demo"
         document.getElementById("theFinalCountdown").innerHTML = days + "d " + hours + "h "
         + minutes + "m " + seconds + "s ";
-        
-        // If the count down is over, write some text
+
         if (distance < 0) {
-            clearInterval(x);
-            document.getElementById("theFinalCountdown").innerHTML = "EXPIRED";
+            if (timer_index < values.length){
+                console.log("Restarting Timer");
+                while (timer_index < values.length) {
+                    console.log("Checking value at index:", timer_index, " Date:", values[timer_index][2]);
+                    if (new Date(values[timer_index][2]).getTime() < new Date().getTime()){
+                        timer_index++;
+                        continue;
+                    }
+                    else{
+                        console.log("Found future date at index:", timer_index);
+                        break;
+                    }
+                }
+                if (timer_index < values.length){
+                    updateCountdown();
+                } else {
+                    console.log("No future dates found. Resetting timer_index or handling edge case.");
+                    // Handle case where no valid future dates are found
+                    clearInterval(x);
+                    document.getElementById("theFinalCountdown").innerHTML = "EXPIRED";
+                    document.getElementById("theFinalCountdown").style.color = "white";
+                
+                }
+            }
+            else{
+                clearInterval(x);
+                document.getElementById("theFinalCountdown").innerHTML = "EXPIRED";
+                document.getElementById("theFinalCountdown").style.color = "white";
+                
+                }
+            
+        }
+
+        if (distance < 60 * 60 * 1000){
+            if (Math.floor(distance / 1000) % 2 == 0){
+                document.getElementById("theFinalCountdown").style.color = "white";
+            }
+            else{
+                document.getElementById("theFinalCountdown").style.color = "black";
+            }
         }
     }, 1000);
+}
+
+function compareFn(a, b) {
+    if (a[2] < b[2]) {
+        return -1;
+    } else if (a[2] > b[2]) {
+        return 1;
+    }
+    return 0;
+}
+
+function RestartTimer(){
+    console.log("Restarting Timer");
+    while (timer_index < values.length) {
+        console.log("Checking value at index:", timer_index, " Date:", values[timer_index][2]);
+        if (new Date(values[timer_index][2]).getTime() < new Date().getTime()){
+            timer_index++;
+            continue;
+        }
+        else{
+            console.log("Found future date at index:", timer_index);
+            break;
+        }
+    }
+    if (timer_index < values.length){
+        updateCountdown();
+        return true;
+    } else {
+        console.log("No future dates found. Resetting timer_index or handling edge case.");
+        // Handle case where no valid future dates are found
+        updateCountdown(true);
+        return false;
+    }
 }
