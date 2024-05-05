@@ -7,6 +7,12 @@ body {
     margin: 0;
 }
 
+.with-text {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
 .profile {
     display: flex;
     flex-direction: column;
