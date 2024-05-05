@@ -11,7 +11,7 @@ body {
 h1 {
     font-size: 90px;
     text-align: center;
-    font-color: white;
+    color: white;
 }
 
 .container {
@@ -82,7 +82,7 @@ h1 {
     width: 80%;
     height: auto;
     margin-left: auto;
-    margin-top: 1rem;
+    margin-top: 3rem;
     margin-right: auto;
     border: 1px solid;
     text-align: center;
