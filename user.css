@@ -10,7 +10,7 @@ body {
 .with-text {
     display: flex;
     flex-direction: row;
-    gap: 2rem;
+    gap: 5rem;
 }
 
 .profile {
@@ -31,7 +31,7 @@ body {
 
 main.table {
     width: 90vh;
-    height: 70vh;
+    height: vh;
     margin-top: 5em;
 
     background-color: #fff5;
