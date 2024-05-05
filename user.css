@@ -92,8 +92,26 @@ main.table {
     text-align: center;
 }
 
+.progress-card {
+    position: relative;
+    margin-top: 5rem;
+    margin-right: auto;
+    margin-left: auto;
+    width: 200px;
+    box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+    height: 180px;
+    border-radius: 5px;
+    backdrop-filter: blur(14px);
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    text-align: center;
+}
+
 .circle-wrap {
-    margin: 120px auto;
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
     width: 150px;
     height: 150px;
     background: #fefcff;
