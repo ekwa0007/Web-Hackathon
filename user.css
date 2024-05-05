@@ -71,7 +71,7 @@ main.table {
 .stats{
     display: flex;
     flex-direction: row;
-    gap: 5rem;
+    gap: 10rem;
 }
 
 .descriptor {
@@ -93,13 +93,13 @@ main.table {
 }
 
 .circle-wrap {
-    margin: 150px auto;
+    margin: 120px auto;
     width: 150px;
     height: 150px;
     background: #fefcff;
     border-radius: 50%;
     border: 1px solid #cdcbd0;
-  }
+}
   
   .circle-wrap .circle .mask,
   .circle-wrap .circle .fill {
