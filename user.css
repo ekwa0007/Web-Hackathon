@@ -5,6 +5,7 @@ body {
     font-style: normal;
     height: 100vh; 
     margin: 0;
+    background-color: rgb(255, 108, 133);
 }
 
 .with-text {
@@ -52,4 +53,10 @@ main.table {
     align-items: center;
     background-attachment: fixed;
     background-size: cover;
+}
+
+.table_body table{
+    border-collapse: separate;
+    border-spacing: 0 20px;
+    padding-left: 3rem;
 }
