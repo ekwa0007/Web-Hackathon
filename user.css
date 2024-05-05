@@ -60,3 +60,7 @@ main.table {
     border-spacing: 0 20px;
     padding-left: 3rem;
 }
+
+.descriptor {
+    width: 60%;
+}
