@@ -861,6 +861,7 @@ body {
     align-items: center;
     width: 100%;
     padding-bottom: 5%;
+    position: relative;
 }
 
 .study img {
@@ -872,7 +873,7 @@ body {
 
 .study .btn {
     position: absolute;
-    top: 85%;
+    top: 72.5%;
     left: 10%;
     transform: translateY(-85%);
     background-color: white; 
