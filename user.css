@@ -5,7 +5,9 @@ body {
     font-style: normal;
     height: 100vh;
     margin: 0;
-    background-color: rgb(255, 108, 133);
+    background-size: 100%;
+    background-image: url(assets/user.png);
+    background-repeat: repeat-y;
 }
 
 .with-text {
