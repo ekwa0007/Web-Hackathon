@@ -19,7 +19,7 @@
     </script>
     <label for = "remainingTime">Remaining time to the submission of the next assignment:</label>
     <div class="box">
-        <h1 id = "theFinalCountdown">00d00h00m</h1>
+        <h1 id = "theFinalCountdown">0d 00h 00m 00s</h1>
     </div>
     <div class="container">
         <div id="assesInfo">
@@ -37,9 +37,10 @@
     <label id="mandatory">mandatory input not filled</label>
     <div class="button-container">
         <button id="infoSubmit">Submit</button>
+        <button id="infoClear">Clear</button>
     </div>
     <div id="output" class="Output">
-        <table id="outputTable">
+        <table id="outputTable" class = "sortable">
             <th id ="unamehead">Unit name</th>
             <th id ="anamehead">Assessment name</th>
             <th id ="duehead">Due date</th>
